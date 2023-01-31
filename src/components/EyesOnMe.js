@@ -2,7 +2,15 @@
     import React from 'react'
 
     export default function EyesOnMe() {
-      return (
-        <button onFocus={() => console.log("Good!")} onBlur={() => console.log("Hey! Eyes on me!")}>EyesOnMe</button>
-      )
-    }
+        function handleFocus() {
+            console.log("Good!");
+          }
+          function handleBlur() {
+            console.log("Hey! Eyes on me!");
+          }
+          return (
+            <button onFocus={handleFocus} onBlur={handleBlur}>
+              Eyes on me
+            </button>
+          );
+        }
